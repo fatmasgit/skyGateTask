@@ -61,7 +61,7 @@ export function AppSidebar() {
                     {/* Registry Profile */}
                     <div className="px-5 pb-8 pt-7">
                         {/* Registry Image */}
-                        <div className="mx-auto mb-3 flex h-[68px] w-[68px] items-center justify-center overflow-hidden rounded-xl">
+                        <div className="mx-auto mb-3 flex h-17 w-17 items-center justify-center overflow-hidden rounded-xl">
                             <picture>
                                 <source
                                     srcSet={RegistryImage}
@@ -107,8 +107,8 @@ export function AppSidebar() {
                                             asChild
                                             className={
                                                 isActive
-                                                    ? "relative h-[45px] rounded-md bg-elixir-yellow-bg text-yellow hover:bg-elixir-yellow-bg focus:bg-elixir-yellow-bg"
-                                                    : "h-[45px] rounded-md text-secondary-text hover:bg-search-bg focus:bg-sidebar-background"
+                                                    ? "relative h-11 rounded-md bg-elixir-yellow-bg text-yellow hover:bg-elixir-yellow-bg focus:bg-elixir-yellow-bg"
+                                                    : "h-11 rounded-md text-secondary-text hover:bg-search-bg focus:bg-sidebar-background"
                                             }
                                         >
                                             <Link to={item.path}>
@@ -117,7 +117,7 @@ export function AppSidebar() {
                                                 <span>{item.title}</span>
 
                                                 {isActive && (
-                                                    <span className="absolute right-0 top-0 h-full w-[2px] bg-yellow" />
+                                                    <span className="absolute right-0 top-0 h-full w-0.5 bg-yellow" />
                                                 )}
                                             </Link>
                                         </SidebarMenuButton>
@@ -131,20 +131,20 @@ export function AppSidebar() {
 
             {/* Footer */}
             <SidebarFooter className="shrink-0 bg-sidebar-background text-[14px] font-manrope-semibold">
-                <Button className="h-[45px] w-full bg-purple-button text-dark-purple hover:bg-purple-button">
+                <Button className="h-11 w-full bg-purple-button text-dark-purple hover:bg-purple-button">
                     + New Elixir
                 </Button>
 
                 <SidebarMenu>
                     <SidebarMenuItem>
-                        <SidebarMenuButton className="h-[45px] justify-center text-secondary-text hover:bg-search-bg focus:bg-sidebar-background">
+                        <SidebarMenuButton className="h-11 justify-center text-secondary-text hover:bg-search-bg focus:bg-sidebar-background">
                             <Settings className="h-5 w-5" />
                             <span>Settings</span>
                         </SidebarMenuButton>
                     </SidebarMenuItem>
 
                     <SidebarMenuItem>
-                        <SidebarMenuButton className="h-[45px] justify-center text-secondary-text hover:bg-search-bg focus:bg-sidebar-background">
+                        <SidebarMenuButton className="h-11 justify-center text-secondary-text hover:bg-search-bg focus:bg-sidebar-background">
                             <HelpCircle className="h-5 w-5" />
                             <span>Support</span>
                         </SidebarMenuButton>

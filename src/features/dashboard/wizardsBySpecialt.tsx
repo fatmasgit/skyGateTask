@@ -27,7 +27,7 @@ export default function WizardsBySpecialty() {
                 Wizards by Specialty
             </h2>
 
-            <div className="relative mt-4 h-[180px]">
+            <div className="relative mt-4 h-45">
                 <ResponsiveContainer width="100%" height="100%">
                     <PieChart>
                         {/* Background ring */}

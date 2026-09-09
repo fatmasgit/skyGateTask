@@ -30,12 +30,11 @@ import { ChevronDown, ChevronUp, Eye } from "lucide-react";
 
 import {
     TableSearch,
-    type SearchField,
 } from "@/components/TableSearch";
 
 import { TablePagination } from "@/components/TablePagination";
 
-import type { Elixir } from "@/types/wizard";
+import type { Elixir, SearchFieldOption, SearchField } from "@/types/wizard";
 
 interface ReusableTableProps<TData> {
     data: TData[];
@@ -43,9 +42,9 @@ interface ReusableTableProps<TData> {
     loading?: boolean;
     error?: boolean;
     pageSize?: number;
-    searchFields?: readonly SearchField[];
-    defaultSearchField?: string;
-    onSearch?: (field: string, value: string) => void;
+    searchFields?: readonly SearchFieldOption[];
+    defaultSearchField?: SearchField;
+    onSearch?: (field: SearchField, value: string) => void;
     onView?: (row: TData) => void;
 }
 
@@ -81,12 +80,12 @@ export function ReusableTable<TData>({
     error = false,
     pageSize = 10,
     searchFields = [],
-    defaultSearchField = "",
+    defaultSearchField = "FirstName",
     onSearch,
     onView,
 }: ReusableTableProps<TData>) {
     const [searchField, setSearchField] =
-        useState<string>(defaultSearchField);
+        useState<SearchField>(defaultSearchField);
 
     const [searchValue, setSearchValue] =
         useState<string>("");
@@ -186,7 +185,7 @@ export function ReusableTable<TData>({
                                                 ),
                                             )}
 
-                                            <TableHead className="w-[80px] px-4 text-[14px] font-manrope-semibold text-secondary-text">
+                                            <TableHead className="w-20 px-4 text-[14px] font-manrope-semibold text-secondary-text">
                                                 Actions
                                             </TableHead>
                                         </TableRow>

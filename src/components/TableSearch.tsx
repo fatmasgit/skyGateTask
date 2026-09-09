@@ -9,13 +9,14 @@ import {
     SelectValue,
 } from "@/components/ui/select";
 import { Search, SlidersHorizontal } from "lucide-react";
-import type { SearchFieldOption } from "@/types/wizard";
+import type { SearchFieldOption, SearchField } from "@/types/wizard";
+
 
 interface TableSearchProps {
     searchFields: readonly SearchFieldOption[];
-    searchField: string;
+    searchField: SearchField;
     searchValue: string;
-    onSearchFieldChange: (value: string) => void;
+    onSearchFieldChange: (value: SearchField) => void;
     onSearchValueChange: (value: string) => void;
 }
 
