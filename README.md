@@ -2,6 +2,9 @@
 
 A Wizards Dashboard implemented from a Figma design using React, TypeScript, Tailwind CSS v4, TanStack Table, TanStack Query, Shadcn UI, Axios, and Recharts.
 
+## Live Demo
+[View the live dashboard](https://sky-gate-task-q4zh.vercel.app/)
+
 ## Implementation
 
 ### 1. Reusable Table
