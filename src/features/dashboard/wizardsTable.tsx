@@ -72,9 +72,7 @@ const columns: ColumnDef<Wizard>[] = [
             return (
                 <div className="flex flex-wrap gap-1 text-primary-text">
                     {elixirs.map((elixir) => (
-                        <span key={elixir.id}>
-                            {elixir.name}
-                        </span>
+                        <span key={elixir.id}>{elixir.name}</span>
                     ))}
                 </div>
             );
@@ -106,11 +104,10 @@ export default function WizardsTable() {
                 error={isError}
                 pageSize={5}
                 searchFields={searchFields}
-                defaultSearchField="FirstName"
-                onSearch={(field, value) => {
-                    setSearchField(field);
-                    setSearchValue(value);
-                }}
+                searchField={searchField}
+                searchValue={searchValue}
+                setSearchField={setSearchField}
+                setSearchValue={setSearchValue}
             />
         </div>
     );
