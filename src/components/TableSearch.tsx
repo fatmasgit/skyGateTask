@@ -12,7 +12,7 @@ import { Search, SlidersHorizontal } from "lucide-react";
 import type { SearchFieldOption, SearchField } from "@/types/wizard";
 
 interface TableSearchProps {
-    searchFields: readonly SearchFieldOption[];
+    searchFields: SearchFieldOption[];
     searchField: SearchField;
     searchValue: string;
     setSearchField: (value: SearchField) => void;

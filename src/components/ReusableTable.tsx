@@ -43,9 +43,9 @@ interface ReusableTableProps<TData> {
     loading?: boolean;
     error?: boolean;
     pageSize?: number;
-    searchFields?: SearchFieldOption[];
-    searchField?: SearchField;
-    searchValue?: string;
+    searchFields: SearchFieldOption[];
+    searchField: SearchField;
+    searchValue: string;
     setSearchField: (value: SearchField) => void;
     setSearchValue: (value: string) => void;
     onView?: (row: TData) => void;
